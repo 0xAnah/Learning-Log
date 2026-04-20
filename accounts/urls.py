@@ -1,9 +1,11 @@
 """Defines URL patterns for accounts."""
 
 from django.urls import path, include
-# from . import views
+from . import views
 
 app_name = 'accounts'
 urlpatterns = [
     path('', include('django.contrib.auth.urls')),
+    # path for registrations
+    path('register/', views.register, name='register')
 ]
